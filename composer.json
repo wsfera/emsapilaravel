@@ -1,0 +1,44 @@
+{
+    "name": "wsfera/emsapilaravel",
+    "description": "Wrapper Ems api for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergienko D.",
+            "email": "dev@web-sfera.com",
+            "homepage": "web-sfera.com"
+        }
+    ],
+    "homepage": "https://github.com/wsfera/emsapilaravel",
+    "keywords": ["Laravel", "EmsApiLaravel", "EMS", "Api"],
+    "require": {
+        "illuminate/support": "~5|~6|~7",
+        "lapaygroup/russianpost": ">=0.1 <=0.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wsfera\\EmsApiLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wsfera\\EmsApiLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wsfera\\EmsApiLaravel\\EmsApiLaravelServiceProvider"
+            ],
+            "aliases": {
+                "EmsApiLaravel": "Wsfera\\EmsApiLaravel\\Facades\\EmsApiLaravel"
+            }
+        }
+    }
+}
